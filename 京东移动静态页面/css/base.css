@@ -1,0 +1,43 @@
+/*通用样式*/
+*, 
+::before, 
+::after{
+	font-size: 14px;
+	font-family: "微软雅黑",sans-serif;
+	padding: 0;
+	margin: 0;
+	/*点击高亮样式*/
+	-webkit-tap-highlight-color: transparent;
+	/*盒子模型*/
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+input {
+	border: none;
+	-webkit-appearance: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+ol,ul {
+	list-style: none;
+}
+/*浮动设置*/
+.f_l {
+	float: left;
+}
+
+.f_r {
+	float: right;
+}
+
+/*清除浮动*/
+.clearfix::before,
+.clear::after {
+	content: "";
+	display: block;
+	height: 0;
+	clear: both;
+}
