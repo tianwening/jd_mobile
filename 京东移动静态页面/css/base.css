@@ -35,7 +35,7 @@ ol,ul {
 
 /*清除浮动*/
 .clearfix::before,
-.clear::after {
+.clearfix::after {
 	content: "";
 	display: block;
 	height: 0;
