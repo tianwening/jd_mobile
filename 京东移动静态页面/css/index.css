@@ -60,6 +60,7 @@
 }
 .jd_banner .banner_images {
 	width: 1000%;
+	transform: translateX(-10%);
 }
 .jd_banner .banner_images li {
 	float: left;
@@ -88,7 +89,7 @@
 	margin-left: 5px;
 }
 .jd_banner .banner_index li.current {
-	background-color: #fff;
+	background-color: #000;
 }
 .jd_nav {
 	width: 100%;

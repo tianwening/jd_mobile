@@ -24,7 +24,7 @@ function headerScroll(){
 		headerDom.style.backgroundColor = 'rgba(201,21,35,'+percent+')';
 	}
 }
-
+// 倒计时的效果
 function cutDownTime(){
 	var totalHour = 3;
 	var totalSec = 3*60*60;
@@ -48,10 +48,33 @@ function cutDownTime(){
 
 		if(totalSec===0){
 			clearInterval(timer);
+			return;
 		}
 	},1000)
 }
 
 function banner(){
+	var width = document.body.offsetWidth;
+	var moveUl = document.querySelector('.banner_images');
+	var liArr = document.querySelectorAll('.banner_index li');
+	var index=1;
 
+	var timer = setInterval(function(){
+		index++;
+		moveUl.style.transition = 'all 0.3s';
+		moveUl.style.transform = 'translateX('+width*(-index)+'px)';
+		
+	},1000)
+
+	moveUl.addEventListener('webkitTransitionEnd',function(){
+		if(index>8){
+			index = 1;
+			moveUl.style.transition = '';
+			moveUl.style.transform = 'translateX('+width*(-index)+'px)';
+		}
+		for(var i=0;i<liArr.length;i++){
+			liArr[i].classList.remove('current');
+		}
+		liArr[index-1].classList.add('current');
+	})
 }
