@@ -15,7 +15,8 @@ function headerScroll(){
 	var headerDom = document.querySelector('.jd_header');
 	
 	window.onscroll = function(){
-		var scrollDistance = window.document.documentElement.scrollTop;
+		var scrollDistance = window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop;
+		// console.log(document.compatMode);
 		//设置透明度的值
 		var percent = scrollDistance/maxDistance;
 		if(percent>1){
